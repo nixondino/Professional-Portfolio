@@ -1,0 +1,7 @@
+Hello Nixon!
+
+Please place your professional resume PDF file here in the public folder and name it "resume.pdf".
+Once you overwrite this placeholder location with your actual resume.pdf, the "Download Resume" CTA buttons on your portfolio website will download your resume directly.
+
+Best,
+Antigravity
