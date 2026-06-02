@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useTheme } from './ThemeContext';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 
 const NAV_ITEMS = [
@@ -17,7 +16,6 @@ const NAV_ITEMS = [
 ];
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -113,14 +111,6 @@ export default function Navbar() {
 
           {/* Theme & Menu Controls */}
           <div className="flex items-center space-x-3">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg text-fg-custom/70 hover:text-accent-primary hover:bg-fg-custom/5 transition-all duration-300 border border-transparent hover:border-glass-border"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
